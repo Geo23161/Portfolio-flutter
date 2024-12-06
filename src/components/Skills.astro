@@ -1,0 +1,32 @@
+---
+const skills = {
+  languages: ["Dart", "JavaScript", "Python", "PHP"],
+  frameworks: ["Flutter", "Firebase", "Riverpod", "Bloc", "RESTful APIs"],
+  tools: ["Git", "GitHub", "GitLab", "Figma", "Adobe XD"]
+};
+---
+<section id="skills" class="py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-12">Compétences techniques</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-xl font-bold mb-4">Langages</h3>
+        <ul class="space-y-2">
+          {skills.languages.map(skill => <li class="text-gray-600">{skill}</li>)}
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-4">Frameworks & Outils</h3>
+        <ul class="space-y-2">
+          {skills.frameworks.map(skill => <li class="text-gray-600">{skill}</li>)}
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-4">Outils</h3>
+        <ul class="space-y-2">
+          {skills.tools.map(skill => <li class="text-gray-600">{skill}</li>)}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

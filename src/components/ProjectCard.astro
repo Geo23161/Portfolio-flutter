@@ -1,0 +1,39 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  technologies: string[];
+  playStoreLink?: string;
+  figmaLink?: string;
+  githubLink?: string;
+  websiteLink? : string;
+}
+
+const { title, description, technologies, playStoreLink, figmaLink, githubLink, websiteLink } = Astro.props;
+---
+<div class="bg-white rounded-lg shadow-lg p-6">
+  <h3 class="text-xl font-bold mb-4">{title}</h3>
+  <p class="text-gray-600 mb-4">{description}</p>
+  
+  <div class="mb-4">
+    <h4 class="font-semibold mb-2">Technologies utilisées:</h4>
+    <ul class="list-disc list-inside text-gray-600">
+      {technologies.map(tech => <li>{tech}</li>)}
+    </ul>
+  </div>
+
+  <div class="flex gap-4">
+    {playStoreLink && (
+      <a href={playStoreLink} class="text-blue-600 hover:underline" target="_blank">Play Store</a>
+    )}
+    {figmaLink && (
+      <a href={figmaLink} class="text-blue-600 hover:underline" target="_blank">Figma</a>
+    )}
+    {githubLink && (
+      <a href={githubLink} class="text-blue-600 hover:underline" target="_blank">GitHub</a>
+    )}
+    {websiteLink && (
+      <a href={websiteLink} class="text-blue-600 hover:underline" target="_blank">Site web</a>
+    )}
+  </div>
+</div>

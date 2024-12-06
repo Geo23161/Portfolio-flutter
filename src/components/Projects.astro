@@ -1,0 +1,54 @@
+---
+import ProjectCard from './ProjectCard.astro';
+---
+<section id="projects" class="py-20 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-12">Réalisations professionnelles</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <ProjectCard
+        title="YUTU - Réseau social de vidéos courtes similaires a Tiktok"
+        description="J'ai été chargé du design complet de Yutu, une application de streaming vidéo innovante qui réinvente les médias sociaux en mettant l'accent sur des connexions authentiques. En intégrant toutes les fonctionnalités clés, j'ai contribué à faire de Yutu une plateforme intuitive et révolutionnaire, libérée des distractions inutiles comme le défilement infini ou les « j'aime » insensés."
+        technologies={[
+          "Flutter Bloc (Business Logic Component)",
+          "FFmpeg Flutter (FFmpeg for Flutter)",
+          "Firebase avec Cloud Functions",
+          "Branch io",
+          "WebSockets (Communication en temps réel)"
+        ]}
+        playStoreLink="https://play.google.com/store/apps/details?id=social.yutu.app&pcampaignid=web_share"
+        figmaLink="https://www.figma.com/design/oZrWidSJNUtbbT43lyAWvD/yutu-redesign"
+        githubLink="#"
+
+      />
+
+      <ProjectCard
+        title="COOBET - Gestion de retraits et dépôts"
+        description="J'ai construit entierement Coobet. Une application dédiée à la gestion des transactions sur des plateformes de paris."
+        technologies={[
+          "Flutter Riverpod",
+          "REST API",
+          "WebSockets (Communication en temps réel)",
+          "SQLite",
+          
+        ]}
+        figmaLink="#"
+        figmaLink="https://www.figma.com/design/oZrWidSJNUtbbT43lyAWvD/yutu-redesign"
+        githubLink="#"
+      />
+
+      <ProjectCard
+        title="Minfo Interactive"
+        description="Minfo est une application révolutionnaire qui transforme vos moments quotidiens en expériences interactives grâce à sa technologie innovante AudioQR. Cette technologie permet une connexion instantanée à des contenus exclusifs, des offres spéciales, des événements en direct, et bien plus encore, simplement en scannant un son invisible avec l’application Minfo."
+        technologies={[
+          "Flutter",
+          "API REST",
+          "Firebase Analytics"
+        ]}
+        playStoreLink="#"
+        figmaLink="https://www.figma.com/design/oZrWidSJNUtbbT43lyAWvD/yutu-redesign"
+        githubLink="#"
+        websiteLink="https://app.minfo.com/"
+      />
+    </div>
+  </div>
+</section>
